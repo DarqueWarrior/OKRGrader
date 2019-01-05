@@ -1,0 +1,76 @@
+﻿{
+   "id": 91,
+   "rev": 8,
+   "fields": {
+      "System.AreaPath": "OKRs",
+      "System.TeamProject": "OKRs",
+      "System.IterationPath": "OKRs",
+      "System.WorkItemType": "Key Result",
+      "System.State": "New",
+      "System.Reason": "Moved to state New",
+      "System.CreatedDate": "2018-12-29T20:01:12.033Z",
+      "System.CreatedBy": {
+         "displayName": "DarqueWarrior",
+         "url": "https://redacted.vssps.visualstudio.com/redacted/_apis/Identities/redacted",
+         "_links": {
+            "avatar": {
+               "href": "https://dev.azure.com/unittests/_apis/GraphProfile/MemberAvatars/aad.redacted"
+            }
+         },
+         "id": "redacted",
+         "uniqueName": "DarqueWarrior@fakeEmail.com",
+         "imageUrl": "https://dev.azure.com/unittests/_api/_common/identityImage?id=redacted",
+         "descriptor": "aad.redacted"
+      },
+      "System.ChangedDate": "2019-01-03T04:57:14.603Z",
+      "System.ChangedBy": {
+         "displayName": "DarqueWarrior",
+         "url": "https://redacted.vssps.visualstudio.com/redacted/_apis/Identities/redacted",
+         "_links": {
+            "avatar": {
+               "href": "https://dev.azure.com/unittests/_apis/GraphProfile/MemberAvatars/aad.redacted"
+            }
+         },
+         "id": "redacted",
+         "uniqueName": "DarqueWarrior@fakeEmail.com",
+         "imageUrl": "https://dev.azure.com/unittests/_api/_common/identityImage?id=redacted",
+         "descriptor": "aad.redacted"
+      },
+      "System.CommentCount": 1,
+      "System.Title": "Interview 100 customers",
+      "Custom.Grade": 0.5
+   },
+   "relations": [
+      {
+         "rel": "System.LinkTypes.Hierarchy-Reverse",
+         "url": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/90",
+         "attributes": {
+            "isLocked": false
+         }
+      }
+   ],
+   "_links": {
+      "self": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91"
+      },
+      "workItemUpdates": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/updates"
+      },
+      "workItemRevisions": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/revisions"
+      },
+      "workItemComments": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/comments"
+      },
+      "html": {
+         "href": "https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted\u0026id=91"
+      },
+      "workItemType": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItemTypes/Key%20Result"
+      },
+      "fields": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/fields"
+      }
+   },
+   "url": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91"
+}

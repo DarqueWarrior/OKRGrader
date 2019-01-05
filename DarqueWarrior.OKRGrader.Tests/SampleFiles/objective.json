@@ -1,0 +1,65 @@
+﻿{
+   "id": 90,
+   "rev": 1,
+   "fields": {
+      "System.AreaPath": "OKRs",
+      "System.TeamProject": "OKRs",
+      "System.IterationPath": "OKRs",
+      "System.WorkItemType": "Objective",
+      "System.State": "New",
+      "System.Reason": "Moved to state New",
+      "System.CreatedDate": "2018-12-29T20:00:25.83Z",
+      "System.CreatedBy": "DarqueWarrior \u003cDarqueWarrior@fakeEmail.com\u003e",
+      "System.ChangedDate": "2018-12-29T20:00:25.83Z",
+      "System.ChangedBy": "DarqueWarrior \u003cDarqueWarrior@fakeEmail.com\u003e",
+      "System.CommentCount": 1,
+      "System.Title": "Rate Azure Services",
+      "System.History": "\u003cdiv\u003eDetermine the most popular Azure Services used by the Enterprise.\u003c/div\u003e",
+      "Custom.Average": "0.6"
+   },
+   "relations": [
+      {
+         "rel": "System.LinkTypes.Hierarchy-Forward",
+         "url": "https://dev.azure.com/unittests/_apis/wit/workItems/91",
+         "attributes": "@{isLocked=False}"
+      },
+      {
+         "rel": "System.LinkTypes.Hierarchy-Forward",
+         "url": "https://dev.azure.com/unittests/_apis/wit/workItems/92",
+         "attributes": "@{isLocked=False}"
+      }
+   ],
+   "_links": {
+      "self": {
+         "href": "https://dev.azure.com/unittests/_apis/wit/workItems/90"
+      },
+      "workItemUpdates": {
+         "href": "https://dev.azure.com/unittests/_apis/wit/workItems/90/updates"
+      },
+      "workItemRevisions": {
+         "href": "https://dev.azure.com/unittests/_apis/wit/workItems/90/revisions"
+      },
+      "workItemHistory": {
+         "href": "https://dev.azure.com/unittests/_apis/wit/workItems/90/history"
+      },
+      "html": {
+         "href": "https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted\u0026id=90"
+      },
+      "workItemType": {
+         "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItemTypes/Objective"
+      },
+      "fields": {
+         "href": "https://dev.azure.com/unittests/_apis/wit/fields"
+      }
+   },
+   "url": "https://dev.azure.com/unittests/_apis/wit/workItems/90",
+   "Title": "Rate Azure Services",
+   "Description": null,
+   "State": "New",
+   "AreaPath": "OKRs",
+   "IterationPath": "OKRs",
+   "AssignedTo": null,
+   "TeamProject": "OKRs",
+   "WorkItemType": "Objective",
+   "Reason": "Moved to state New"
+}

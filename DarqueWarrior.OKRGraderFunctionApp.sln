@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarqueWarrior.OKRGraderFunctionApp", "DarqueWarrior.OKRGraderFunctionApp\DarqueWarrior.OKRGraderFunctionApp.csproj", "{56C51754-ECD1-4085-AD8C-EF866E67C9E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarqueWarrior.OKRGrader", "DarqueWarrior.OKRGrader\DarqueWarrior.OKRGrader.csproj", "{764D70C5-9A97-4C41-9F6C-F18B6062F1A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarqueWarrior.Grader.Tests", "DarqueWarrior.OKRGrader.Tests\DarqueWarrior.Grader.Tests.csproj", "{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C51754-ECD1-4085-AD8C-EF866E67C9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C51754-ECD1-4085-AD8C-EF866E67C9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C51754-ECD1-4085-AD8C-EF866E67C9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C51754-ECD1-4085-AD8C-EF866E67C9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764D70C5-9A97-4C41-9F6C-F18B6062F1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764D70C5-9A97-4C41-9F6C-F18B6062F1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764D70C5-9A97-4C41-9F6C-F18B6062F1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764D70C5-9A97-4C41-9F6C-F18B6062F1A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46707B59-7851-4871-92DA-E94C43CAE273}
+	EndGlobalSection
+EndGlobal

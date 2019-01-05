@@ -1,0 +1,114 @@
+{
+   "subscriptionId": "redacted",
+   "notificationId": 1,
+   "id": "redacted",
+   "eventType": "workitem.updated",
+   "publisherId": "tfs",
+   "message": {
+      "text": "Key Result #91 (Interview 100 customers) updated by DarqueWarrior\r\n(https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&id=91)",
+      "html": "<a href=\"https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&amp;id=91\">Key Result #91</a> (Interview 100 customers) updated by DarqueWarrior",
+      "markdown": "[Key Result #91](https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&id=91) (Interview 100 customers) updated by DarqueWarrior"
+   },
+   "detailedMessage": {
+      "text": "Key Result #91 (Interview 100 customers) updated by DarqueWarrior\r\n(https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&id=91)\r\n\r\n",
+      "html": "<a href=\"https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&amp;id=91\">Key Result #91</a> (Interview 100 customers) updated by DarqueWarrior<ul></ul>",
+      "markdown": "[Key Result #91](https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&id=91) (Interview 100 customers) updated by DarqueWarrior\r\n\r\n"
+   },
+   "resource": {
+      "id": 3,
+      "workItemId": 91,
+      "rev": 3,
+      "revisedBy": {
+         "id": "1f31d0c9-e53a-47d2-5c39",
+         "name": "DarqueWarrior <DarqueWarrior@fakeEmail.com>",
+         "displayName": "DarqueWarrior",
+         "url": "https://redacted.vssps.visualstudio.com/redacted/_apis/Identities/redacted",
+         "_links": { "avatar": { "href": "https://dev.azure.com/unittests/_apis/GraphProfile/MemberAvatars/redacted" } },
+         "uniqueName": "DarqueWarrior@fakeEmail.com",
+         "imageUrl": "https://dev.azure.com/unittests/_api/_common/identityImage?id=redacted",
+         "descriptor": "aad.redacted"
+      },
+      "revisedDate": "9999-01-01T00:00:00Z",
+      "fields": {
+         "System.Rev": {
+            "oldValue": 2,
+            "newValue": 3
+         },
+         "System.AuthorizedDate": {
+            "oldValue": "2018-12-29T20:01:26.113Z",
+            "newValue": "2019-01-03T01:34:03.673Z"
+         },
+         "System.RevisedDate": {
+            "oldValue": "2019-01-03T01:34:03.673Z",
+            "newValue": "9999-01-01T00:00:00Z"
+         },
+         "System.ChangedDate": {
+            "oldValue": "2018-12-29T20:01:26.113Z",
+            "newValue": "2019-01-03T01:34:03.673Z"
+         },
+         "System.Watermark": {
+            "oldValue": 148,
+            "newValue": 151
+         },
+         "Custom.Grade": {
+            "oldValue": 0.6,
+            "newValue": 0.5
+         }
+      },
+      "_links": {
+         "self": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/updates/3" },
+         "workItemUpdates": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/updates" },
+         "parent": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91" },
+         "html": { "href": "https://dev.azure.com/unittests/web/wi.aspx?pcguid=redacted&id=91" }
+      },
+      "url": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/updates/3",
+      "revision": {
+         "id": 91,
+         "rev": 3,
+         "fields": {
+            "System.AreaPath": "OKRs",
+            "System.TeamProject": "OKRs",
+            "System.IterationPath": "OKRs",
+            "System.WorkItemType": "Key Result",
+            "System.State": "New",
+            "System.Reason": "Moved to state New",
+            "System.CreatedDate": "2018-12-29T20:01:12.033Z",
+            "System.CreatedBy": "DarqueWarrior <DarqueWarrior@fakeEmail.com>",
+            "System.ChangedDate": "2019-01-03T01:34:03.673Z",
+            "System.ChangedBy": "DarqueWarrior <DarqueWarrior@fakeEmail.com>",
+            "System.CommentCount": 1,
+            "System.Title": "Interview 100 customers",
+            "Custom.Grade": 0.5
+         },
+         "relations": [
+            {
+               "rel": "System.LinkTypes.Hierarchy-Reverse",
+               "url": "https://dev.azure.com/unittests/_apis/wit/workItems/90",
+               "attributes": { "isLocked": false }
+            }
+         ],
+         "_links": {
+            "self": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/revisions/3" },
+            "workItemRevisions": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/revisions" },
+            "parent": { "href": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91" }
+         },
+         "url": "https://dev.azure.com/unittests/redacted/_apis/wit/workItems/91/revisions/3"
+      }
+   },
+   "resourceVersion": "1.0",
+   "resourceContainers": {
+      "collection": {
+         "id": "redacted",
+         "baseUrl": "https://dev.azure.com/unittests/"
+      },
+      "account": {
+         "id": "redacted",
+         "baseUrl": "https://dev.azure.com/unittests/"
+      },
+      "project": {
+         "id": "redacted",
+         "baseUrl": "https://dev.azure.com/unittests/"
+      }
+   },
+   "createdDate": "2019-01-03T01:34:11.674613Z"
+}
