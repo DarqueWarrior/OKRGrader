@@ -190,7 +190,9 @@
             {
                var text = await steamReader.ReadToEndAsync();
 
-               if(text.Contains("Sign In"))
+               // Make sure the text is HTML and you are not just finding "Sign In" in the 
+               // work item JSON data. 
+               if(text.Contains("<!DOCTYPE html") && text.Contains("Sign In"))
                {
                   // The response is a sign in page. This happens when the PAT can't be parsed.
                   throw new HttpRequestException(System.Net.HttpStatusCode.Unauthorized, "Check your Personal Access Token");
