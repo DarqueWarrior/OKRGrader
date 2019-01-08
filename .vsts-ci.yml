@@ -39,6 +39,12 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
     zipAfterPublish: True
 
+- task: CopyFiles@2
+  displayName: Copy ARM Template
+  inputs:
+    Contents: '**/azuredeploy.*'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
