@@ -141,5 +141,11 @@
             "[resourceId('Microsoft.KeyVault/vaults', variables('vaultName'))]"
          ]
       }
-   ]
+   ],
+   "outputs": {
+      "AppServiceName": {
+         "type": "string",
+         "value": "[variables('functionName')]"
+      }
+   }
 }
