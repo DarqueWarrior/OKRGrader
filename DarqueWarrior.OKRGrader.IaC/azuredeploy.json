@@ -1,0 +1,145 @@
+{
+   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+   "contentVersion": "1.0.0.0",
+   "parameters": {
+      "PAT": {
+         "type": "securestring"
+      }
+   },
+   "variables": {
+      "secretName": "[concat(variables('vaultName'), '/PAT')]",
+      "functionName": "[concat('functionApp', '-', uniquestring(resourceGroup().id))]",
+      "storageName": "[concat('storage',  uniquestring(resourceGroup().id))]",
+      "vaultName": "[concat('vault', '-', uniquestring(resourceGroup().id))]",
+      "planName": "[concat('plan', '-', uniquestring(resourceGroup().id))]"
+   },
+   "resources": [
+      {
+         "type": "Microsoft.Web/serverfarms",
+         "apiVersion": "2016-09-01",
+         "name": "[variables('planName')]",
+         "location": "[resourceGroup().location]",
+         "sku": {
+            "name": "Y1",
+            "tier": "Dynamic",
+            "size": "Y1",
+            "family": "Y",
+            "capacity": 0
+         },
+         "properties": {
+            "name": "[variables('planName')]"
+         }
+      },
+      {
+         "apiVersion": "2016-08-01",
+         "dependsOn": [
+            "[resourceId('Microsoft.Web/serverfarms', variables('planName'))]",
+            "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]",
+            "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('vaultName'), 'PAT')]"
+         ],
+         "identity": {
+            "type": "SystemAssigned"
+         },
+         "kind": "functionapp",
+         "location": "Central US",
+         "name": "[variables('functionName')]",
+         "properties": {
+            "name": "[variables('functionName')]",
+            "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('planName'))]",
+            "siteConfig": {
+               "appSettings": [
+                  {
+                     "name": "FUNCTIONS_WORKER_RUNTIME",
+                     "value": "dotnet"
+                  },
+                  {
+                     "name": "AzureWebJobsStorage",
+                     "value": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')), '2015-05-01-preview').key1)]"
+                  },
+                  {
+                     "name": "FUNCTIONS_EXTENSION_VERSION",
+                     "value": "~2"
+                  },
+                  {
+                     "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+                     "value": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageName'),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageName')), '2015-05-01-preview').key1)]"
+                  },
+                  {
+                     "name": "WEBSITE_CONTENTSHARE",
+                     "value": "[concat(toLower(variables('functionName')), 'b032')]"
+                  },
+                  {
+                     "name": "PAT",
+                     "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(resourceId('Microsoft.KeyVault/vaults/secrets', variables('vaultName'), 'PAT')).secretUriWithVersion, ')')]"
+                  },
+                  {
+                     "name": "WEBSITE_NODE_DEFAULT_VERSION",
+                     "value": "8.11.1"
+                  }
+               ]
+            },
+            "clientAffinityEnabled": false,
+            "reserved": false
+         },
+         "type": "Microsoft.Web/sites"
+      },
+      {
+         "type": "Microsoft.Storage/storageAccounts",
+         "apiVersion": "2015-05-01-preview",
+         "name": "[variables('storageName')]",
+         "location": "[resourceGroup().location]",
+         "properties": {
+            "accountType": "Standard_LRS"
+         }
+      },
+      {
+         "type": "Microsoft.KeyVault/vaults",
+         "name": "[variables('vaultName')]",
+         "apiVersion": "2016-10-01",
+         "location": "[resourceGroup().location]",
+         "properties": {
+            "sku": {
+               "name": "standard",
+               "family": "A"
+            },
+            "accessPolicies": [],
+            "enabledForTemplateDeployment": true,
+            "tenantId": "[subscription().tenantId]"
+         }
+      },
+      {
+         "type": "Microsoft.KeyVault/vaults/accessPolicies",
+         "name": "[concat(variables('vaultName'), '/add')]",
+         "apiVersion": "2016-10-01",
+         "properties": {
+            "accessPolicies": [
+               {
+                  "tenantId": "[subscription().tenantId]",
+                  "objectId": "[reference(variables('functionName'), '2016-03-01', 'Full').identity.principalId]",
+                  "permissions": {
+                     "secrets": [
+                        "get",
+                        "list"
+                     ]
+                  }
+               }
+            ]
+         },
+         "dependsOn": [
+            "[resourceId('Microsoft.Web/sites', variables('functionName'))]"
+         ]
+      },
+      {
+         "type": "Microsoft.KeyVault/vaults/secrets",
+         "name": "[variables('secretName')]",
+         "apiVersion": "2015-06-01",
+         "properties": {
+            "contentType": "text/plain",
+            "value": "[parameters('PAT')]"
+         },
+         "dependsOn": [
+            "[resourceId('Microsoft.KeyVault/vaults', variables('vaultName'))]"
+         ]
+      }
+   ]
+}

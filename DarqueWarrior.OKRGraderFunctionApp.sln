@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarqueWarrior.OKRGrader", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarqueWarrior.Grader.Tests", "DarqueWarrior.OKRGrader.Tests\DarqueWarrior.Grader.Tests.csproj", "{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}"
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "DarqueWarrior.OKRGrader.IaC", "DarqueWarrior.OKRGrader.IaC\DarqueWarrior.OKRGrader.IaC.deployproj", "{670EE068-BF7F-410C-B430-AF364B97E62D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16B76DB8-D3D4-47B5-AF69-1A6EB324F751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670EE068-BF7F-410C-B430-AF364B97E62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670EE068-BF7F-410C-B430-AF364B97E62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670EE068-BF7F-410C-B430-AF364B97E62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670EE068-BF7F-410C-B430-AF364B97E62D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
