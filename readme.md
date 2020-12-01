@@ -14,7 +14,7 @@ The repository has three projects.
 
 ## Local Development
 
-This code was developed with [Visual Studio 2017 Version 15.9.4](https://visualstudio.microsoft.com/) with latest Azure Function and Web Job Tools Version 15.9.02046.0. However, the project is all .NET Core and can be built on any platform running [.NET Core 2.1](http://dot.net).
+This code was developed with [Visual Studio 2017 Version 15.9.4](https://visualstudio.microsoft.com/?WT.mc_id=devops-0000-dbrown) with latest Azure Function and Web Job Tools Version 15.9.02046.0. However, the project is all .NET Core and can be built on any platform running [.NET Core 2.1](http://dot.net).
 
 To work on your development machine add a `local.settings.json` file with the following contents to the OKRGraderFunctionApp folder.
 
@@ -29,4 +29,4 @@ To work on your development machine add a `local.settings.json` file with the fo
 }
 ```
 
-You will also need the [Azure Storage Emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator).
+You will also need the [Azure Storage Emulator](https://docs.microsoft.com/azure/storage/common/storage-use-emulator?WT.mc_id=devops-0000-dbrown).
